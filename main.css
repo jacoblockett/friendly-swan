@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: skyblue;
+  height: 100vh;
+  width: 100%;
+}
+
+.content {
+  padding-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.msg {
+  font-family: "Noto Sans KR";
+  font-size: 4em;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+.cake {
+  margin-top: 50px;
+  height: 140px;
+  cursor: pointer;
+}
+
+.sneakyimg {
+  position: absolute;
+  height: 100px;
+  z-index: 0;
+  transform: translate(25px, 25px) rotate(-40deg);
+  transition: 0.2s linear;
+}
+
+.cakeimg {
+  position: relative;
+  height: 100%;
+  z-index: 1;
+}
+
+.cake:hover .sneakyimg {
+  transform: translate(-20px, -20px) rotate(-40deg);
+}
+
+.hidden {
+  display: none;
+}
+
+.ryan {
+  height: 100px;
+  position: absolute;
+}
+
+.ryan1 {
+  left: 20vw;
+  top: 15vh;
+  animation: flip1 1.3s infinite;
+  z-index: 2;
+}
+
+.ryan2 {
+  right: 20vw;
+  top: 50vh;
+  transform: scaleX(-1);
+  animation: flip2 1.3s infinite;
+  z-index: 2;
+}
+
+@keyframes flip1 {
+  0% {
+    transform: scaleX(-1);
+  }
+  50% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(-1);
+  }
+}
+
+@keyframes flip2 {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(-1);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
